@@ -22,8 +22,9 @@ public class FibonacciIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        if (counter <= 2) {
+        if (counter < 2) {
             counter++;
+            return 1;
         }
         counter++;
         int temp = pred;
